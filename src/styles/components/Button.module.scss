@@ -1,0 +1,34 @@
+@import '../variables.module';
+
+.button {
+  background: $HIGH_FIDELITY_ORANGE_COLOR;
+  border-radius: 10px;
+  border: 1px transparent solid;
+  padding: 16px 24px;
+  color: $FONT_WHITE_COLOR;
+  font-family: $FONT_ROBOTO;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all ease-in-out .3s;
+
+  /*svg {
+    margin-left: 10px;
+    transition: all ease-in-out .3s;
+  }*/
+
+  &:hover, &:focus {
+    background: transparent;
+    border: 1px $HIGH_FIDELITY_ORANGE_COLOR solid;
+
+   /* svg {
+      margin-left: 25px;
+    }*/
+  }
+}

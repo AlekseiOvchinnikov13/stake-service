@@ -1,0 +1,38 @@
+@import '../variables.module';
+
+.dropDown {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 50%;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+
+  background-color: $HIGH_FIDELITY_BLUE_COLOR;
+  border-radius: 0 0 .6666em .6666em;
+
+  overflow: auto;
+  height: 0;
+
+  transition: all .3s ease-in-out;
+
+  button {
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    color: $HIGH_FIDELITY_PURPLE_COLOR;
+    font-size: .8333em;
+
+    border: none;
+    background-color: transparent;
+
+    padding: .6em .5em .6em 1.8em;
+    border-top: 1px solid $CALCULATOR_BORDER_COLOR;
+  }
+}
+
+.dropDownOpen {
+  height: 8.333em;
+}

@@ -1,0 +1,122 @@
+@import '../variables.module';
+
+.form {
+  display: grid;
+  padding-top: .02777em;
+  gap: .02777em;
+  grid-auto-columns: 1fr;
+  width: 100%;
+
+  .inputWrapper {
+    width: 100%;
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr;
+    gap: .02777em;
+
+    .checkboxLabel {
+      font-size: .0104em;
+      font-weight: 400;
+      color: rgba($FONT_WHITE_COLOR, .4);
+      font-family: $FONT_ROBOTO;
+
+      display: flex;
+      align-items: center;
+
+      input {
+        margin: 0 .75em 0 0;
+      }
+    }
+
+    .textInput {
+      border: 2px solid $EARNING_CARD_BOX_SHADOW;
+      background: $HIGH_FIDELITY_WHITE_COLOR;
+      border-radius: .2em;
+      color: rgba($FONT_LIGHT_GRAY_COLOR, .4);
+      text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
+      font-family: $FONT_RALEWAY;
+      font-size: .01388em;
+      font-weight: 600;
+
+      padding: .8em;
+
+      &:invalid {
+        border-color: $HIGH_FIDELITY_BLUE_COLOR;
+      }
+    }
+  }
+
+  .submitButton {
+    font-family: $FONT_ROBOTO;
+    font-size: .0125em;
+    font-weight: 500;
+
+    color: $FONT_WHITE_COLOR;
+    background: $HIGH_FIDELITY_ORANGE_COLOR;
+    border: 1px transparent solid;
+    border-radius: .555em;
+    padding: .8888em 1.3333em;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all ease-in-out .3s;
+
+    .arrow {
+      transition: all ease-in-out .3s;
+      width: max(2.111em, 38px);
+      height: max(.666em, 12px);
+    }
+
+    &:hover, &:focus {
+      background: transparent;
+      border: 1px $HIGH_FIDELITY_ORANGE_COLOR solid;
+
+      .arrow {
+        margin-left: .555em;
+      }
+    }
+  }
+}
+
+.text {
+  font-size: .0125em;
+}
+
+/*
+
+@media (max-width: 950px) {
+  #write-to-us {
+    padding: 0 0 0 20px;
+  }
+  #write-to-us .form-text-input-wrapper {
+    flex-direction: column;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email,
+  #write-to-us .form-text-input-wrapper .checkbox-label,
+  #write-to-us .submit-button {
+    width: 100%;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email,
+  #write-to-us .submit-button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  #write-to-us .form-text-input-wrapper #name,
+  #write-to-us .form-text-input-wrapper #email {
+    padding: 10px 14px;
+  }
+  #write-to-us .form-text-input-wrapper #name {
+    margin: 12px 0 12px;
+  }
+  #write-to-us .form-text-input-wrapper .checkbox-label {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 12px 0 24px;
+  }
+}*/

@@ -1,0 +1,37 @@
+@import '../variables.module';
+
+.header {
+  background: $HEADER_BACKGROUND_COLOR;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+
+  .logo {
+    width: .0861em;
+    height: .03194em;
+    position: relative;
+    z-index: 99;
+    margin: .01736em 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    flex-direction: row-reverse;
+  }
+  .header .logo {
+    width: .14588em;
+    height: .05294em;
+  }
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    margin: .03555em 0;
+    width: .2422em;
+    height: .08888em;
+  }
+}

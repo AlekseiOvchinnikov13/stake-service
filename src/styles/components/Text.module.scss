@@ -1,0 +1,32 @@
+@import '../variables.module';
+
+.paragraph {
+  font-family: $FONT_ROBOTO;
+  font-size: .75em;
+  line-height: 160%;
+  color: $FONT_WHITE_COLOR;
+  margin-top: 1.7em;
+  position: relative;
+  z-index: 5;
+}
+
+.description {
+  font-weight: 400;
+  font-size: .00972em;
+  line-height: 1.571em;
+  color: $FONT_DARK_GRAY_COLOR;
+}
+
+/*
+@media (max-width: 1366px) {
+  .paragraph-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 950px) {
+  .paragraph-text {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}*/

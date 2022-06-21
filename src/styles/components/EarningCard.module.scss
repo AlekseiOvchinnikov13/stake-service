@@ -1,0 +1,39 @@
+@import '../variables.module';
+
+.earningCard {
+  display: grid;
+
+  padding: .02777em .03472em;
+  border-radius: .01111em;
+  border: 1px solid $HIGH_FIDELITY_BLUE_COLOR;
+  box-shadow: 0 1.2px 30px $EARNING_CARD_BOX_SHADOW;
+  backdrop-filter: blur(40px);
+  background: $HIGH_FIDELITY_WHITE_COLOR;
+
+  width: 100%;
+
+  .text {
+    font-family: $FONT_ROBOTO;
+    font-weight: 400;
+    font-size: min(.0125em, 26px);
+    color: $FONT_DARK_GRAY_COLOR;
+    text-transform: uppercase;
+  }
+
+  .textCenter {
+    padding: 8px 0;
+  }
+
+  .textActive {
+    font-family: $FONT_MONTSERRAT;
+    font-weight: 600;
+    font-size: min(.02222em, 40px);
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+
+  .period {
+    font-weight: 600;
+    font-size: min(.01666em, 32px);
+    color: $WIREFRAME_WHITE_COLOR;
+  }
+}

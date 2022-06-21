@@ -1,0 +1,91 @@
+@import '../variables.module';
+
+.subtitleWrapper {
+  width: 70%;
+  font-size: .01666em;
+
+  span {
+    font-weight: 600;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+    line-height: 1.3333em;
+  }
+
+  h6 {
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1.3888em;
+    color: $FONT_WHITE_COLOR;
+    text-transform: uppercase;
+  }
+
+  .linkArrow {
+    margin-top: 5.8333em;
+  }
+}
+
+.blueStick {
+  position: relative;
+  padding-left: max(1em, 16px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 5.0833em;
+    width: 2px;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+}
+
+.onRight {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/*
+@media (max-width: 1366px) {
+  .subtitle-block h6 {
+    font-size: 52px;
+    line-height: 78px;
+  }
+
+  .subtitle-block {
+    width: 60%;
+  }
+}
+
+@media (max-width: 950px) {
+  .subtitle-block {
+    width: 100%;
+  }
+  .subtitle-block-right {
+    padding-top: 75px;
+  }
+  .subtitle-block span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .subtitle-block h6 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  .blue-stick:before {
+    height: 190px;
+  }
+}
+
+@media (max-width: 650px) {
+  .blue-stick:before {
+    height: 250px;
+  }
+}
+
+@media (max-width: 420px) {
+  .subtitle-block h6 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+*/

@@ -1,0 +1,29 @@
+@import '../variables.module';
+
+.tag {
+  font-family: $FONT_ROBOTO;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
+  background: $TAG_BACKGROUND;
+  border-radius: .333em;
+  color: $FONT_WHITE_COLOR;
+  padding: .55em .6666em;
+}
+
+.categories-tag {
+  font-size: 14px;
+}
+
+.tagFilterButton {
+  outline: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 4px 16px;
+  border: 1px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.tagFilterActive {
+  border: 1px solid $HIGH_FIDELITY_BLUE_COLOR;
+}

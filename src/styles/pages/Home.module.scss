@@ -1,0 +1,165 @@
+@import "../variables.module";
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.section {
+  padding: 0.125em 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.headSection {
+  .subTitle {
+    font-size: .025em;
+    text-transform: capitalize;
+    color: $FONT_DARK_GRAY_COLOR;
+    animation: fadeInRight 1.5s ease;
+  }
+
+  .title {
+    font-size: .0833em;
+    text-transform: uppercase;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+    animation: fadeInLeft 1.5s ease;
+  }
+}
+
+.projectSection {
+  .cardsWrapper {
+    width: 100%;
+    display: grid;
+    gap: .01388em;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, .16em);
+  }
+}
+
+.aboutSection {
+  .about, .whatWeDo {
+    position: relative;
+  }
+
+  .reliableValidator {
+    padding: .5em 0;
+  }
+
+  .beginnings {
+    padding-bottom: .1388em;
+  }
+
+  .middleImage {
+    position: absolute;
+    left: -10%;
+    top: 40%;
+    width: .5em;
+    height: .5em;
+  }
+}
+
+.blogSection {
+  .blogHeader {
+    position: relative;
+  }
+
+  .blogCardsWrapper {
+    width: 100%;
+    padding-top: .0486em;
+    display: grid;
+    gap: .01736em;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, .2em);
+  }
+}
+
+.calcSection {
+  .calcHeader {
+    position: relative;
+
+    .stroke {
+      font-size: min(.08333em, 120px);
+    }
+  }
+}
+
+.contactSection {
+  .contactHeader {
+    position: relative;
+
+    .SubTitleBlock {
+      p {
+        margin-top: 3.5em;
+        font-family: $FONT_RALEWAY;
+      }
+    }
+
+    .stroke {
+      font-size: min(.08333em, 120px);
+    }
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+}
+
+.contactsSection {
+  .contactsHeader {
+    position: relative;
+
+    .SubTitleBlock {
+      p {
+        margin-top: 3.5em;
+        font-family: $FONT_RALEWAY;
+      }
+    }
+
+    .stroke {
+      font-size: min(.08333em, 120px);
+    }
+  }
+}
+
+.imageWrapper {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .topImage, .bottomImage {
+    position: absolute;
+    right: 0;
+  }
+
+  .topImage {
+    top: 0;
+    width: 1em;
+    height: .8em;
+  }
+
+  .bottomImage {
+    bottom: 0;
+    width: .5em;
+    height: .5em;
+  }
+}
+

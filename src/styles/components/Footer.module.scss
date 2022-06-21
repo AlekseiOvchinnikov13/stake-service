@@ -1,0 +1,32 @@
+@import '../variables.module';
+
+.footer {
+  padding-top: .06944em;
+  padding-bottom: .06944em;
+  position: relative;
+  z-index: 5;
+
+  h2 {
+    text-transform: uppercase;
+    color: $HIGH_FIDELITY_WHITE_COLOR;
+    font-weight: 700;
+    font-size: .0566em;
+  }
+}
+
+/*
+@media (max-width: 1520px) {
+  .footer h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+}
+*/

@@ -1,0 +1,81 @@
+@import "../variables.module";
+
+.projectCard {
+  width: 100%;
+  height: .1666em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba($HIGH_FIDELITY_PURPLE_COLOR, .2);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 1px 15px $EARNING_CARD_BOX_SHADOW;
+  border: 1px solid rgba($HIGH_FIDELITY_BLUE_COLOR, .2);
+  border-radius: .01111em;
+  padding: .01388em;
+
+  transition: all .3s ease-in-out;
+
+  .image {
+    border-radius: 50%;
+    width: .03888em;
+    height: .03888em;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .label {
+    font-size: .01944em;
+    font-weight: 700;
+    color: $FONT_WHITE_COLOR;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .percent, .soon {
+    font-size: .01666em;
+    font-weight: 800;
+    font-family: $FONT_MONTSERRAT;
+    color: $HIGH_FIDELITY_BLUE_COLOR;
+  }
+
+  .soon {
+    text-transform: capitalize;
+  }
+
+  .reward {
+    font-size: .00833em;
+    color: $WIREFRAME_WHITE_COLOR;
+  }
+
+  .link {
+    font-size: .010416em;
+    color: $HIGH_FIDELITY_ORANGE_COLOR;
+    font-family: $FONT_ROBOTO;
+    text-transform: capitalize;
+
+    display: flex;
+    align-items: center;
+
+    .arrow {
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .link, .reward {
+    font-weight: 500;
+  }
+
+  &:hover, &:focus {
+    border: 1px solid $HIGH_FIDELITY_BLUE_COLOR;
+    transform: scale(1.02);
+
+    .link {
+      .arrow {
+        margin-left: 10px;
+      }
+    }
+  }
+}

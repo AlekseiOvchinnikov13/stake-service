@@ -1,0 +1,25 @@
+@import "../variables.module";
+
+.linkArrow {
+  font-weight: 500;
+  font-size: .5em;
+  color: $HIGH_FIDELITY_BLUE_COLOR;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .arrow {
+    margin-left: 1em;
+    width: .75em;
+    height: .75em;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover, &:focus {
+    .arrow {
+      margin-left: 1.5em;
+    }
+  }
+}
+

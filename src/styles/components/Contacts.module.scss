@@ -1,0 +1,43 @@
+@import '../variables.module';
+
+.contacts {
+  display: grid;
+  gap: .75em;
+  margin-top: 2.8em;
+
+  .link {
+    display: flex;
+    align-items: center;
+
+    transition: all .3s ease-in-out;
+
+    .img {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+
+    .text {
+      font-weight: 600;
+      font-size: 1em;
+      padding-left: .5em;
+      color: $FONT_WHITE_COLOR;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+/*
+@media (max-width: 950px) {
+  .contacts-links {
+    margin-top: 25px;
+  }
+  .contacts-links__item span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}*/

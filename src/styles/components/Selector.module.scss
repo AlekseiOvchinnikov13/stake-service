@@ -1,0 +1,148 @@
+@import '../variables.module';
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes blockDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes blockUp {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+
+@keyframes blockRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes blockLeft {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 50%;
+  }
+}
+
+.selector {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto;
+
+  font-size: .01666em;
+  background: $HIGH_FIDELITY_PURPLE_COLOR;
+  border: 2px solid $CALCULATOR_BORDER_COLOR;
+  border-radius: .6666em;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  .colorBlock {
+    position: absolute;
+    left: 0;
+    bottom: auto;
+    z-index: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: .6666em;
+    background-color: $HIGH_FIDELITY_BLUE_COLOR;
+    transition: all .3s ease-in-out;
+  }
+
+  .colorBlockUp {
+    animation: blockUp .3s ease-in-out forwards;
+  }
+
+  .colorBlockDown {
+    animation: blockDown .3s ease-in-out forwards;
+  }
+
+  .colorBlockBorder {
+    border-radius: .6666em .6666em 0 0;
+  }
+
+  .text {
+    font-size: min(1em, 32px);
+    font-weight: 700;
+    font-family: $FONT_RALEWAY;
+
+    color: $CALCULATOR_INACTIVE_COLOR;
+    background-color: transparent;
+    text-transform: capitalize;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    height: 3.75em;
+    padding: 1.25em .41666em;
+
+    .arrow {
+      margin-left: .5em;
+      height: max(.66666em, 10px);
+      width: max(.41666em, 16px);
+
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .textActive {
+    color: $HIGH_FIDELITY_PURPLE_COLOR;
+  }
+
+  .toggleButton {
+    position: absolute;
+    z-index: 3;
+    border: none;
+
+    border-radius: 50%;
+    background-color: $FONT_WHITE_COLOR;
+    box-shadow: inset 0px -3px 4px rgba(43, 8, 70, 0.5);
+
+    width: 2.5em;
+    height: 2.5em;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    .toggleImg {
+      width: 80%;
+      height: 80%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .toggleSpin {
+      animation: rotation .4s ease-in-out 1;
+    }
+  }
+
+  .hideToggle {
+    transition: opacity .2s ease-out;
+    opacity: 0;
+  }
+}
