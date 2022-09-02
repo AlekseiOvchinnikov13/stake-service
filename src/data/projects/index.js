@@ -1,16 +1,11 @@
 import IntroImg from './images/intro.png';
 import StakeImg from './images/stake.png';
-// import CosmicHorizonIcon from '../images/project-cards/project-icon-cosmic-horizon.png';
 
 export const GET_STAKING_TUTORIAL_SUBTITLE = coin => `Your ${coin.toUpperCase()}s must be in a wallet or custodial account in order to use our staking services.`;
 export const GET_REWARD_CALCULATOR_SUBTITLE = name => `How many dollars do you want to put in for ${name}?`;
 export const POST_TITLE_HOW_TO_STAKE = name => `How to stake ${name} tokens`;
 
-// const introductoryArticleTitle = 'INTRODUCTORY ARTICLE';
-// const howToStakeArticleTitle = 'HOW TO STAKE';
-
 // export const PROJECT_ID_GRAPH = 'the-graph';
-
 
 export const PROJECTS_DATA = [
   {

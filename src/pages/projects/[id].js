@@ -8,7 +8,6 @@ import TopBg from '/public/assets/images/project-bg.svg';
 import ImageContainer from '../../components/ImageContainer';
 import Button from '../../components/Button/Button';
 
-import styles from '../../styles/pages/ProjectPage.module.scss';
 import {useEffect, useState} from 'react';
 import ReadMore from '../../components/ReadMore';
 import InfoCard from '../../components/InfoCard';
@@ -16,6 +15,7 @@ import SectionTitles from '../../components/SectionTitles';
 import ArticleCard from '../../components/ArticleCard';
 import {isMobile} from '../../utils';
 import Calculator from '../../components/Calculator';
+import styles from '../../styles/pages/ProjectPage.module.scss';
 
 const Project = ({project}) => {
   const {id} = project;

@@ -27,6 +27,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getPosts} from '../store/posts/postsSlice';
 import {sliceArrayByCount} from '../helpers/helpers';
 import styles from '../styles/pages/Home.module.scss';
+import ReadMore from '../components/ReadMore';
 
 const Home = () => {
   const {data, isLoading} = useGetProjectsQuery(PROJECTS_DATA.map(item => item.id));
@@ -37,10 +38,13 @@ const Home = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  /* const [isMobileState, setIsMobileTate] = useState(false);
+  const [isMobileState, setIsMobileTate] = useState(false);
   useEffect(() => {
     setIsMobileTate(isMobile());
-  }, [isMobile()]);*/
+  }, [isMobile()]);
+
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const projectOpenHandler = () => setIsProjectsOpen(!isProjectsOpen);
 
   /*const [countPosts, setCountPosts] = useState(0);
   useEffect(() => {
@@ -54,20 +58,20 @@ const Home = () => {
         <p className={styles.subTitle}>trusted & secure</p>
         <h1 className={styles.title}>validator</h1>
       </div>
-      <div id="project" className={`${styles.section} ${styles.projectSection}`}>
+      <div id="project" className={`${styles.section} ${styles.projectSection} ${isProjectsOpen ? styles.projectSectionOpen : ''}`}>
         <div className={styles.cardsWrapper}>
           {!isLoading && data.length > 0
             ? data.map(coin =>
               <ProjectCard key={coin.id} data={coin}/>)
             : <Loader/>}
         </div>
-        {/*{isMobileState &&
+        {isMobileState &&
           <ReadMore
-            onClick={() => setIsProjectOpen(!isProjectWrapperOpen)}
-            textClose={READ_MORE_TEXT_SEE_ALL_CLOSE}
-            textOpen={READ_MORE_TEXT_SEE_ALL_OPEN}
-            isOpen={isProjectWrapperOpen}
-          />}*/}
+            onClick={projectOpenHandler}
+            textOpen={'See all'}
+            isOpen={isProjectsOpen}
+            className={styles.readMoreProjects}
+          />}
       </div>
       <div id="about-us" className={`${styles.aboutSection} ${styles.section}`}>
         <div className={styles.about}>
@@ -134,7 +138,7 @@ const Home = () => {
           }
         </div>
       </div>
-      <div id="calculator" className={`${styles.calcSection} ${styles.section}`}>
+      {/*<div id="calculator" className={`${styles.calcSection} ${styles.section}`}>
         <div className={styles.calcHeader}>
           <SubTitleBlock
             label={CALCULATOR_TITLE}
@@ -150,7 +154,7 @@ const Home = () => {
           ? <Calculator/>
           : <Loader/>
         }
-      </div>
+      </div>*/}
       <div id="contact" className={`${styles.contactSection} ${styles.section}`}>
         <div className={styles.contactHeader}>
           <SubTitleBlock

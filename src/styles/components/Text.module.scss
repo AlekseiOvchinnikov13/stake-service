@@ -2,7 +2,7 @@
 
 .paragraph {
   font-family: $FONT_ROBOTO;
-  font-size: .75em;
+  font-size: max(.75em, 14px);
   line-height: 160%;
   color: $FONT_WHITE_COLOR;
   margin-top: 1.7em;

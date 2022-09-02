@@ -6,7 +6,7 @@
 
   color: $HIGH_FIDELITY_BLUE_COLOR;
   font-family: $FONT_ROBOTO;
-  font-size: .010416em;
+  font-size: max(.010416em, 14px);
   font-weight: 500;
 
   display: flex;

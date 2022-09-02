@@ -26,14 +26,14 @@
 
 .headSection {
   .subTitle {
-    font-size: .025em;
+    font-size: max(.025em, 18px);
     text-transform: capitalize;
     color: $FONT_DARK_GRAY_COLOR;
     animation: fadeInRight 1.5s ease;
   }
 
   .title {
-    font-size: .0833em;
+    font-size: max(.0833em, 48px);
     text-transform: uppercase;
     color: $HIGH_FIDELITY_BLUE_COLOR;
     animation: fadeInLeft 1.5s ease;
@@ -44,10 +44,11 @@
   .cardsWrapper {
     width: 100%;
     display: grid;
-    gap: .01388em;
+    gap: max(.01388em, 20px);
     place-items: center;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, .16em);
+    grid-template-rows: repeat(3, .18em);
   }
 }
 
@@ -162,4 +163,95 @@
     height: .5em;
   }
 }
+
+@media (max-width: 850px) {
+  .projectSection {
+    .cardsWrapper {
+      grid-template-columns: repeat(auto-fill, .2em);
+      grid-template-rows: repeat(2, .19em);
+      grid-auto-rows: 0;
+
+      div {
+        transition: all .2s ease-in-out;
+      }
+
+      div:nth-child(n+7) {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    .readMoreProjects {
+      margin: -20px auto 0;
+    }
+  }
+
+  .projectSectionOpen {
+    .cardsWrapper {
+      grid-auto-rows: .19em;
+
+      div:nth-child(n+7) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .readMoreProjects {
+      margin: 30px auto 0;
+    }
+  }
+  .aboutSection {
+    .middleImage {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .projectSection {
+    .cardsWrapper {
+      grid-template-columns: repeat(auto-fill, .3em);
+      grid-template-rows: repeat(2, .25em);
+
+      div:nth-child(n+5) {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  .projectSectionOpen {
+    .cardsWrapper {
+      grid-auto-rows: .3em;
+
+      div:nth-child(n+5) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .projectSection {
+    .cardsWrapper {
+      grid-template-rows: repeat(2, .37em);
+    }
+  }
+  .projectSectionOpen {
+    .cardsWrapper {
+      grid-auto-rows: .37em;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .projectSection {
+    .cardsWrapper {
+      grid-template-columns: repeat(auto-fill, .26em);
+      grid-template-rows: repeat(2, .33em);
+    }
+  }
+}
+
 
