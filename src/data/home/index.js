@@ -1,4 +1,3 @@
-import CosmicHorizonIcon from '../images/project-cards/project-icon-cosmic-horizon.png';
 import ContactLinkMail from '../images/contact-links/contact-link-mail.svg';
 import ContactLinkTwitter from '../images/contact-links/contact-link-twitter.svg';
 import ContactLinkMedium from '../images/contact-links/contact-link-medium.svg';
@@ -44,57 +43,4 @@ export const CONTACT_LINKS = [
   }
 ];
 
-export const PRODUCT_CARDS_ARRAY = [
-  {
-    id: 'solana',
-    percent: '6.05&nbsp;%',
-    percentNumber: 6.05
-  },
-  {
-    id: 'celo',
-    percent: '2.89&nbsp;%',
-    percentNumber: 2.89
-  },
-  {
-    id: 'the-graph',
-    percent: '10&nbsp;%',
-    percentNumber: 10
-  },
-  {
-    id: 'oasis-network',
-    percent: '10.2&nbsp;%',
-    percentNumber: 10.2
-  },
-  {
-    id: 'agoric',
-    percentNumber: 1
-  },
-  {
-    id: 'regen',
-    percent: '29.03&nbsp;%',
-    percentNumber: 29.03
-  },
-  {
-    id: 'sentinel',
-    percent: '28.49&nbsp;%',
-    percentNumber: 28.49
-  },
-  {
-    id: 'centrifuge',
-    percentNumber: 1,
-  },
-  {
-    img: CosmicHorizonIcon,
-    id: 'cosmic-horizon',
-    isSoon: true,
-    coin: 'coho',
-    coinName: 'Cosmic Horizon',
-    percentNumber: 1
-  },
-  {
-    id: 'dock',
-    percent: '16.68&nbsp;%',
-    percentNumber: 16.68
-  }
-];
 

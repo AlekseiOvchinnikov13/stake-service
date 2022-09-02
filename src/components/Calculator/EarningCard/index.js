@@ -1,28 +1,34 @@
 import PropTypes from 'prop-types';
-import {useContext} from 'react';
-import {CoinsContext} from '../../../context/CoinsContext';
-import {getProfitByCoin} from '../../../helpers/helpers';
 import styles from '../../../styles/components/EarningCard.module.scss';
+import {PROJECTS_DATA} from '../../../data/projects';
+import useProjects from '../../../hooks/useProjects';
 
 const EarningCard = ({
   isCrypto,
   cryptoValue,
   usdValue,
-  coin,
+  projectId,
+  tokenName,
   data: {
     period,
     count
   }
 }) => {
-  const coins = useContext(CoinsContext);
+
+  const coins = useProjects();
+
+  if (!projectId) return null;
+
+  const symbol = coins ? coins.find(coin => coin.id === projectId).symbol : tokenName;
+  const {apy} = PROJECTS_DATA.find(project => project.id === projectId).commonInfo;
 
   return (
     <div className={styles.earningCard}>
       <span className={`${styles.text} ${isCrypto ? styles.textActive : ''}`}>
-        {`$ ${(usdValue * count * getProfitByCoin(coin, coins)).toFixed(4)}`}
+        {`$ ${(usdValue * count * apy / 100).toFixed(4)}`}
       </span>
       <span className={`${styles.text} ${styles.textCenter} ${!isCrypto ? styles.textActive : ''}`}>
-        {`${coin} ${(cryptoValue * count * getProfitByCoin(coin, coins)).toFixed(4)}`}
+        {`${symbol} ${(cryptoValue * count * apy / 100).toFixed(4)}`}
       </span>
       <span className={styles.period}>
         {period}

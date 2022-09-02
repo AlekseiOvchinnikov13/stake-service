@@ -8,13 +8,21 @@
     grid-template-columns: 1.1fr 4fr;
     gap: .02777em;
     place-items: center;
+  }
+}
 
-    .inputsWrapper {
+.calculatorProject {
+  margin-top: 0;
+
+  .calcWrapper {
+    grid-template-columns: 4fr 2fr;
+
+    .stakeBtn {
+      grid-row: 2;
+      grid-column: 2;
+
       width: 100%;
       height: 100%;
-
-      display: grid;
-      gap: .0208em;
     }
   }
 }

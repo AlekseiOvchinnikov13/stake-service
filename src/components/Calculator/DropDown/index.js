@@ -1,14 +1,14 @@
-import {useContext} from 'react';
-import {CoinsContext} from '../../../context/CoinsContext';
+import {PROJECTS_DATA} from '../../../data/projects';
+import useProjects from '../../../hooks/useProjects';
 import styles from '../../../styles/components/DropDown.module.scss';
 
 const DropDown = ({
-  coinName,
   onSelect,
   closeHandler,
-  isOpen
+  isOpen,
+  activeCoin
 }) => {
-  const coins = useContext(CoinsContext);
+  const coins = useProjects();
 
   const selectHandler = val => {
     onSelect(val);
@@ -17,14 +17,16 @@ const DropDown = ({
 
   return (
     <div className={`${styles.dropDown} ${isOpen ? styles.dropDownOpen : ''}`}>
-      {coins && coins.filter(el => el.coinName !== coinName && el.price && el.percentNumber).map(currency =>
-        <button
-          key={currency.coin}
-          onClick={() => selectHandler(currency)}
-        >
-          {`${currency.coinName} (${currency.coin.toUpperCase()})`}
-        </button>
-      )}
+      {coins && coins.filter(el => el.name !== activeCoin.name && el.current_price)
+        .map(coin =>
+          !!PROJECTS_DATA.find(project => project.id === coin.id).commonInfo?.apy &&
+          (<button
+            key={coin.symbol}
+            onClick={() => selectHandler(coin)}
+          >
+            {`${coin.name} (${coin.symbol.toUpperCase()})`}
+          </button>)
+        )}
     </div>
   );
 };

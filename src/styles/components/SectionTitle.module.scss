@@ -1,0 +1,38 @@
+@import '../variables.module';
+
+.titlesWrapper {
+  text-align: center;
+  padding: 0 0 .02777em;
+  color: $FONT_LIGHT_GRAY_COLOR;
+
+  .sectionTitle {
+    font-size: .025em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sectionSubtitle {
+    font-family: $FONT_ROBOTO;
+    font-size: .01111em;
+    font-weight: 400;
+    padding-top: .625em;
+  }
+}
+
+/*
+@media (max-width: 780px) {
+  .page-section-title, .page-section-subtitle {
+    text-align: left;
+  }
+  .page-section-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .page-section-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}*/

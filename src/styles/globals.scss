@@ -14,8 +14,6 @@ html {
 body, html {
   font-family: $FONT_RALEWAY;
   margin: 0;
-  //-webkit-font-smoothing: antialiased;
-  //-moz-osx-font-smoothing: grayscale;
   position: relative;
   scroll-behavior: smooth;
   height: unset;
@@ -32,10 +30,6 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   font-size: max(100vw, 450px);
-
-  /*.ScrollbarsCustom-Thumb {
-      background-color: $HIGH_FIDELITY_BLUE_COLOR !important;
-  }*/
 }
 
 h1, h2, h3, h4, h5, h6, a, p, ul, ol, li, div, span, menu, button {

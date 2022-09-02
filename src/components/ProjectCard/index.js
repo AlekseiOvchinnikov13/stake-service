@@ -1,28 +1,24 @@
-import styles from '../../styles/components/ProjectCard.module.scss';
 import ImageContainer from '../ImageContainer';
 import Link from 'next/link';
 import Arrow from '../Arrow';
+import {PROJECTS_DATA} from '../../data/projects';
+import styles from '../../styles/components/ProjectCard.module.scss';
 
-const ProjectCard = ({data: {img, coinName, percent, isSoon, id}}) => {
-  const isHasApy = !!percent;
+const ProjectCard = ({data : {image, name, id}}) => {
+  const {commonInfo: {apy}} = PROJECTS_DATA.find(project => project.id === id);
 
   return (
     <div className={styles.projectCard}>
       <ImageContainer
-        src={img}
+        src={image}
         className={styles.image}
-        alt={coinName}
+        alt={name}
       />
-      <p className={styles.label}>{coinName}</p>
-      {!isSoon &&
-        <p
-          className={styles.percent}
-          dangerouslySetInnerHTML={{
-            __html: percent
-          }}
-        />}
-      {!isSoon && <p className={styles.reward}>{`Nominal Reward ${isHasApy ? 'APY' : '(soon)'}`}</p>}
-      {isSoon && <p className={styles.soon}>soon</p>}
+      <p className={styles.label}>{name}</p>
+      <p className={`${apy ? styles.percent : styles.soon}`}>
+        {apy ? `${apy} %` : 'soon'}
+      </p>
+      <p className={styles.reward}>Nominal Reward APY</p>
       <Link href={`/projects/${id}`}>
         <a className={styles.link}>
           explore

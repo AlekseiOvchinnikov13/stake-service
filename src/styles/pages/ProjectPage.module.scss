@@ -1,0 +1,179 @@
+@import '../variables.module';
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.projectPage {
+  .ImageWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .625em;
+    height: .59027em;
+    opacity: .4;
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+
+    .contentHeader {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-auto-rows: auto auto;
+      column-gap: .04em;
+
+      .headerDescription {
+        grid-row: span 2;
+
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: .01944em;
+
+        .imgLink {
+          width: .1em;
+          height: .1em;
+          border-radius: 50%;
+          overflow: hidden;
+          animation: fadeInLeft 1.5s ease .1s;
+
+          .img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .descriptionBlock {
+          display: grid;
+
+          .title {
+            font-size: .05em;
+            font-weight: 700;
+            color: $HIGH_FIDELITY_BLUE_COLOR;
+            text-transform: uppercase;
+            animation: fadeInRight 1.5s ease;
+          }
+
+          .description {
+            font-size: .011111em;
+            font-family: $FONT_ROBOTO;
+            color: $FONT_DARK_GRAY_COLOR;
+
+            margin-top: 1.25em;
+            opacity: 1;
+            height: unset;
+            visibility: visible;
+            transition: all .3s ease-in-out;
+          }
+
+          .descriptionHidden {
+            margin-top: 0;
+            opacity: 0;
+            height: 0;
+            visibility: hidden;
+          }
+
+          .readMore {
+            margin-top: 1.333em;
+            align-self: flex-end;
+          }
+        }
+      }
+
+      .headerIndicators {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .01388em;
+
+        .indicatorWrapper {
+          place-self: center;
+
+          display: grid;
+          place-items: flex-start;
+          gap: .006944em;
+
+          width: 100%;
+          height: 100%;
+          background: rgba($HIGH_FIDELITY_PURPLE_COLOR, .2);
+          backdrop-filter: blur(40px);
+          box-shadow: 0 1px 15px $EARNING_CARD_BOX_SHADOW;
+          border: 1px solid rgba($HIGH_FIDELITY_BLUE_COLOR, .2);
+          border-radius: .005555em;
+          padding: .01666em;
+
+          .value {
+            font-family: $FONT_MONTSERRAT;
+            font-size: .025em;
+            font-weight: 800;
+            color: $HIGH_FIDELITY_BLUE_COLOR;
+          }
+
+          .subtitle {
+            font-size: max(.008333em, 12px);
+            font-weight: 500;
+            color: $WIREFRAME_WHITE_COLOR;
+          }
+        }
+
+        .stakeButton {
+          grid-column: span 2;
+        }
+
+        .indicator {
+          font-family: $FONT_ROBOTO;
+          font-size: .010416em;
+          color: $FONT_DARK_GRAY_COLOR;
+          place-self: center;
+        }
+      }
+
+      .infoWrapper {
+        grid-column: span 2;
+        font-size: .013888em;
+        padding-top: 7.3333em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        gap: .75em;
+      }
+    }
+
+    .projectSection {
+      padding-top: .08333em;
+    }
+
+    .articleSection {
+      .articleWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .02083em;
+      }
+    }
+
+    .mechanicsSection {
+      .infoWrapper {
+        display: grid;
+        font-size: .02222em;
+        grid-template-columns: repeat(5, 1fr);
+        gap: .78125em;
+      }
+    }
+  }
+}

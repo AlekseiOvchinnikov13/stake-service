@@ -11,6 +11,7 @@ const Selector = ({
   setActiveCoin,
   isCrypto,
   toggleHandler,
+  projectId
 }) => {
   const [isSpin, setIsSpin] = useState(false);
 
@@ -21,21 +22,25 @@ const Selector = ({
 
   const [isOpen, setIsOpen] = useState(false);
 
+  if (!activeCoin) return null;
+  // console.log({activeCoin});
+
   return (
-    <div className={styles.selector}>
+    <div className={`${styles.selector} ${projectId ? styles.selectorProject : ''}`}>
       <div
         className={`${styles.colorBlock} ${isCrypto ? styles.colorBlockUp : styles.colorBlockDown} ${isCrypto && isOpen ? styles.colorBlockBorder : ''}`}/>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={!projectId ? () => setIsOpen(!isOpen) : () => null}
         className={`${styles.text} ${isCrypto ? styles.textActive : ''}`}
       >
-        {`${activeCoin?.coinName} (${activeCoin?.coin?.toUpperCase()})`}
-        <Arrow
-          fillColor={isCrypto ? purpleColor : calcInactiveColor}
-          direction={'down'}
-          isLong={false}
-          className={styles.arrow}
-        />
+        {`${activeCoin.name} (${activeCoin.symbol.toUpperCase()})`}
+        {!projectId &&
+          <Arrow
+            fillColor={isCrypto ? purpleColor : calcInactiveColor}
+            direction={'down'}
+            isLong={false}
+            className={styles.arrow}
+          />}
       </button>
       <button
         className={`${styles.toggleButton} ${isOpen ? styles.hideToggle : ''}`}
@@ -51,11 +56,13 @@ const Selector = ({
       <div className={`${styles.text} ${!isCrypto ? styles.textActive : ''}`}>
         Dollar ($)
       </div>
-      <DropDown
-        isOpen={isOpen}
-        closeHandler={() => setIsOpen(!isOpen)}
-        onSelect={setActiveCoin}
-      />
+      {!projectId &&
+        <DropDown
+          isOpen={isOpen}
+          closeHandler={() => setIsOpen(!isOpen)}
+          onSelect={setActiveCoin}
+          activeCoin={activeCoin}
+        />}
     </div>
   );
 };

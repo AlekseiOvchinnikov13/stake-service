@@ -1,15 +1,16 @@
-import {useContext, useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Selector from './Selector';
 import Input from './Input';
 import EarningCard from './EarningCard';
 import Button from '../Button/Button';
 import {EARNING_CARDS_DATA} from '../../data/calculator';
-import {CoinsContext} from '../../context/CoinsContext';
+import useProjects from '../../hooks/useProjects';
 import styles from '../../styles/components/Calculator.module.scss';
+import {PROJECTS_DATA} from '../../data/projects';
 
-const Calculator = ({projectId, onButtonClick}) => {
-  const coins = useContext(CoinsContext);
+const Calculator = ({projectId, info, onButtonClick}) => {
+  const coins = useProjects();
 
   const [isCrypto, setIsCrypto] = useState(true);
   const toggleCryptoHandler = () => {
@@ -18,12 +19,12 @@ const Calculator = ({projectId, onButtonClick}) => {
     setUsdValue(1);
   };
 
-  const [activeCoin, setActiveCoin] = useState({});
+  const [activeCoin, setActiveCoin] = useState(null);
   const changeActiveCoinHandler = obj => setActiveCoin(obj);
 
   useEffect(() => {
-    setActiveCoin(projectId ? coins.find(coin => coin.id === projectId) : coins[0]);
-  }, [coins, projectId]);
+    setActiveCoin(projectId ? {...PROJECTS_DATA.find(project => project.id === projectId), ...info} : coins[0]);
+  }, [coins, info, projectId]);
 
   const [cryptoValue, setCryptoValue] = useState(1);
   const [usdValue, setUsdValue] = useState(1);
@@ -32,10 +33,10 @@ const Calculator = ({projectId, onButtonClick}) => {
     if (value < 0) return;
     if (isCrypto) {
       setCryptoValue(value);
-      setUsdValue(value * activeCoin?.price);
+      setUsdValue(value * activeCoin?.current_price);
     } else {
       setUsdValue(value);
-      setCryptoValue(value / activeCoin?.price);
+      setCryptoValue(value / activeCoin?.current_price);
     }
   };
 
@@ -56,39 +57,39 @@ const Calculator = ({projectId, onButtonClick}) => {
             setActiveCoin={changeActiveCoinHandler}
             isCrypto={isCrypto}
             toggleHandler={toggleCryptoHandler}
+            projectId={projectId}
+            handlerStake={onButtonClick}
           />
-          {projectId &&
-            <Button
-              label={'Stake Now'}
-              onClick={onButtonClick}
-              className={'stake-button'}
-            />
-          }
-          <div className={styles.inputsWrapper}>
-            <Input
-              coin={activeCoin?.coin}
-              isActive={isCrypto}
-              setValue={inputChangeHandler}
-              value={cryptoValue}
-            />
-            <Input
-              coin="$"
-              isActive={!isCrypto}
-              setValue={inputChangeHandler}
-              value={usdValue}
-            />
-          </div>
+          <Input
+            coin={activeCoin?.symbol}
+            isActive={isCrypto}
+            setValue={inputChangeHandler}
+            value={cryptoValue}
+          />
+          {projectId && <Button
+            label={'Stake Now'}
+            onClick={onButtonClick}
+            className={`stake-button ${styles.stakeBtn}`}
+            asLink={projectId}
+          />}
+          <Input
+            coin="$"
+            isActive={!isCrypto}
+            setValue={inputChangeHandler}
+            value={usdValue}
+          />
         </div>
       </div>
       <div className={styles.earningWrapper}>
-        {EARNING_CARDS_DATA.map(card =>
+        {activeCoin && EARNING_CARDS_DATA.map(card =>
           <EarningCard
             isCrypto={isCrypto}
             data={card}
             key={card.period}
             cryptoValue={cryptoValue}
             usdValue={usdValue}
-            coin={activeCoin?.coin}
+            projectId={activeCoin.id}
+            tokenName={activeCoin.symbol}
           />
         )}
       </div>
@@ -98,7 +99,7 @@ const Calculator = ({projectId, onButtonClick}) => {
 
 Calculator.propTypes = {
   projectId: PropTypes.string,
-  onButtonClick: PropTypes.func
+  onButtonClick: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
 };
 
 export default Calculator;
