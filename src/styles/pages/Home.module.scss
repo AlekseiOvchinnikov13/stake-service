@@ -247,6 +247,7 @@
   .blogSection {
     .blogCardsWrapper {
       grid-template-columns: repeat(auto-fill, 0.7em);
+      place-items: flex-start;
 
       div:nth-child(n+2) {
         visibility: hidden;
