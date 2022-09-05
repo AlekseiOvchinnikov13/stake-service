@@ -37,3 +37,22 @@
     color: $WIREFRAME_WHITE_COLOR;
   }
 }
+
+@media (max-width: 600px) {
+  .earningCard {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .text {
+      font-size: 15px;
+    }
+
+    .textActive, .period {
+      font-size: 18px;
+    }
+
+    .period {
+      grid-column: 1 / span 2;
+    }
+  }
+}

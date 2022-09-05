@@ -2,7 +2,7 @@
 
 .linkArrow {
   font-weight: 500;
-  font-size: .5em;
+  font-size: max(.5em, 12px);
   color: $HIGH_FIDELITY_BLUE_COLOR;
 
   display: flex;

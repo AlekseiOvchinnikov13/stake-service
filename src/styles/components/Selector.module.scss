@@ -168,5 +168,29 @@
   .colorBlockDown {
     animation: blockRight .3s ease-in-out forwards;
   }
+}
 
+@media (max-width: 600px) {
+  .selector {
+    grid-row: 1;
+    grid-template-columns: 1fr 1fr;
+
+    .text {
+      font-size: 18px;
+    }
+
+    .colorBlock {
+      height: 100%;
+      width: 50%;
+      left: auto;
+    }
+
+    .colorBlockUp {
+      animation: blockLeft .3s ease-in-out forwards;
+    }
+
+    .colorBlockDown {
+      animation: blockRight .3s ease-in-out forwards;
+    }
+  }
 }

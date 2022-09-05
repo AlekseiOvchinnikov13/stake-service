@@ -18,7 +18,7 @@
   span {
     font-family: $FONT_RALEWAY;
     font-weight: 600;
-    font-size: .777em;
+    font-size: max(.777em, 18px);
     color: $FONT_LIGHT_GRAY_COLOR;
     text-shadow: 0 0 3px $CALCULATOR_TEXT_SHADOW_COLOR;
     opacity: .4;
@@ -30,7 +30,7 @@
     background-color: transparent;
     font-family: $FONT_MONTSERRAT;
     font-weight: 700;
-    font-size: 1em;
+    font-size: max(1em, 18px);
     color: $WIREFRAME_WHITE_COLOR;
     outline: none;
     width: 100%;

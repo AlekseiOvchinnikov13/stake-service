@@ -24,7 +24,7 @@ const BlogCard = (
       className={styles.img}
       src={thumbnail}
       alt={title}
-      objectFit="contain"
+      objectFit="fill"
       unoptimized
     />
     <div className={styles.textBlock}>

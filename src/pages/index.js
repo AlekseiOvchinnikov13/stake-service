@@ -46,12 +46,6 @@ const Home = () => {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const projectOpenHandler = () => setIsProjectsOpen(!isProjectsOpen);
 
-  /*const [countPosts, setCountPosts] = useState(0);
-  useEffect(() => {
-    if (!isBrowser()) return;
-    setCountPosts(4);
-  }, [isBrowser()]);*/
-
   return (
     <>
       <div className={`${styles.section} ${styles.headSection}`}>
@@ -138,7 +132,7 @@ const Home = () => {
           }
         </div>
       </div>
-      {/*<div id="calculator" className={`${styles.calcSection} ${styles.section}`}>
+      <div id="calculator" className={`${styles.calcSection} ${styles.section}`}>
         <div className={styles.calcHeader}>
           <SubTitleBlock
             label={CALCULATOR_TITLE}
@@ -154,7 +148,7 @@ const Home = () => {
           ? <Calculator/>
           : <Loader/>
         }
-      </div>*/}
+      </div>
       <div id="contact" className={`${styles.contactSection} ${styles.section}`}>
         <div className={styles.contactHeader}>
           <SubTitleBlock

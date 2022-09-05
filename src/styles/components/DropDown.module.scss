@@ -22,8 +22,9 @@
     text-align: left;
     width: 100%;
     font-weight: 600;
+    font-family: $FONT_RALEWAY;
     color: $HIGH_FIDELITY_PURPLE_COLOR;
-    font-size: .8333em;
+    font-size: max(.8333em, 18px);
 
     border: none;
     background-color: transparent;
@@ -35,4 +36,14 @@
 
 .dropDownOpen {
   height: 8.333em;
+}
+
+@media (max-width: 600px) {
+  .dropDown {
+    top: 100%;
+    width: 50%;
+  }
+  .dropDownOpen {
+    height: 200px;
+  }
 }
