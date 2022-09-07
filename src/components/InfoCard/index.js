@@ -23,14 +23,14 @@ const InfoCard = ({
   return (
     <>
       {isAddress && <div className={styles.toast}><Toast/></div>}
-      <div className={`${styles.infoCard} ${isAddress ? styles.infoCardAddress : ''} ${isMechanics ? styles.infoCardMechanics : ''}`}>
+      <div
+        className={`${styles.infoCard} ${isAddress ? styles.infoCardAddress : ''} ${isMechanics ? styles.infoCardMechanics : ''}`}>
         <p className={styles.value}>
           {value ? value : '-'}
           {isAddress &&
             <button onClick={copyToClipBoard} className={styles.copyBtn}>
               copy
-            </button>
-          }
+            </button>}
         </p>
         <p className={styles.title}>{title}</p>
       </div>

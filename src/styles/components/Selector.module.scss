@@ -170,6 +170,12 @@
   }
 }
 
+@media (max-width: 750px) {
+  .selectorProject {
+    grid-column: 1;
+  }
+}
+
 @media (max-width: 600px) {
   .selector {
     grid-row: 1;

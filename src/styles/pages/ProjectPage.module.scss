@@ -64,7 +64,7 @@
           display: grid;
 
           .title {
-            font-size: .05em;
+            font-size: max(.05em, 48px);
             font-weight: 700;
             color: $HIGH_FIDELITY_BLUE_COLOR;
             text-transform: uppercase;
@@ -72,7 +72,7 @@
           }
 
           .description {
-            font-size: .011111em;
+            font-size: max(.011111em, 14px);
             font-family: $FONT_ROBOTO;
             color: $FONT_DARK_GRAY_COLOR;
 
@@ -121,7 +121,7 @@
 
           .value {
             font-family: $FONT_MONTSERRAT;
-            font-size: .025em;
+            font-size: max(.025em, 32px);
             font-weight: 800;
             color: $HIGH_FIDELITY_BLUE_COLOR;
           }
@@ -135,11 +135,12 @@
 
         .stakeButton {
           grid-column: span 2;
+          font-size: max(0.0125em, 18px);
         }
 
         .indicator {
           font-family: $FONT_ROBOTO;
-          font-size: .010416em;
+          font-size: max(.010416em, 15px);
           color: $FONT_DARK_GRAY_COLOR;
           place-self: center;
         }
@@ -173,6 +174,72 @@
         font-size: .02222em;
         grid-template-columns: repeat(5, 1fr);
         gap: .78125em;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .projectPage .content {
+    .mechanicsSection {
+      .infoWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-rows: 0;
+
+        div {
+          transition: all .2s ease-in-out;
+        }
+
+        div:nth-child(n+5) {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+
+      .readMoreMechanics {
+        margin: 0 auto;
+      }
+    }
+
+    .mechanicsSectionOpen {
+      .infoWrapper {
+        grid-auto-rows: auto;
+
+        div:nth-child(n+5) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .readMoreMechanics {
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .projectPage {
+    .content {
+      .contentHeader {
+        grid-template-columns: 1fr;
+
+        .headerDescription {
+          grid-template-columns: 1fr;
+          margin-bottom: 30px;
+        }
+
+        .infoWrapper {
+          grid-column: 1;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .articleSection {
+        .articleWrapper {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }

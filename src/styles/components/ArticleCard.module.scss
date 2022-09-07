@@ -25,7 +25,7 @@
       justify-content: space-between;
 
       .title {
-        font-size: .01666em;
+        font-size: max(.01666em, 20px);
         font-weight: 700;
         color: $HIGH_FIDELITY_BLUE_COLOR;
         text-transform: uppercase;
@@ -33,7 +33,7 @@
 
       .subtitle {
         font-family: $FONT_ROBOTO;
-        font-size: .01111em;
+        font-size: max(.01111em, 15px);
         color: $FONT_DARK_GRAY_COLOR;
       }
     }
@@ -44,7 +44,7 @@
     padding-top: .01111em;
 
     .title {
-      font-size: .0125em;
+      font-size: max(.0125em, 16px);
       font-weight: 600;
       color: $FONT_LIGHT_GRAY_COLOR;
 
@@ -56,13 +56,13 @@
 
     .source {
       font-family: $FONT_ROBOTO;
-      font-size: .01111em;
+      font-size: max(.01111em, 15px);
       color: $FONT_DARK_GRAY_COLOR;
       padding: .5em 0 1em;
     }
 
     .link {
-      font-size: .01111em;
+      font-size: max(.01111em, 16px);
       font-weight: 500;
       color: $HIGH_FIDELITY_ORANGE_COLOR;
       text-transform: capitalize;
@@ -83,52 +83,10 @@
   }
 }
 
-
-/*
-@media (max-width: 1100px) {
-  .article-card {
-    width: 100%;
-  }
-  .article-card + .article-card {
-    margin-top: 30px;
+@media (max-width: 650px) {
+  .articleCard {
+    .articleHeader {
+      grid-template-columns: 1fr 15fr;
+    }
   }
 }
-
-@media (max-width: 600px) {
-  .article-card .article-card__header .article-card__text-wrapper .article-card__article-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 26px;
-  }
-  .article-card .article-card__header .article-card__text-wrapper .article-card__article-subtitle {
-    font-size: 15px;
-    line-height: 22px
-  }
-  .article-card .article-card__content .article-card__post-title {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .article-card .article-card__content .article-card__source {
-    font-size: 15px;
-    line-height: 22px;
-  }
-  .article-card {
-    padding: 20px 15px 15px;
-  }
-  .article-card .article-card__header .article-card__img {
-    width: 65px;
-  }
-}
-
-@media (max-width: 320px) {
-  .article-card .article-card__header .article-card__text-wrapper .article-card__article-title{
-    font-size: 16px;
-  }
-  .article-card .article-card__header .article-card__text-wrapper .article-card__article-subtitle {
-    font-size: 14px;
-  }
-  .article-card .article-card__content .article-card__post-title {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}*/

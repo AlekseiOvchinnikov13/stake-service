@@ -32,7 +32,6 @@
 
 .infoCardAddress {
   grid-template-columns: 1fr 3fr;
-  direction: rtl;
   place-items: center;
   gap: 1.2em;
 
@@ -49,6 +48,8 @@
 
     width: 100%;
     position: relative;
+    grid-column: 2;
+    grid-row: 1;
 
     .copyBtn {
       position: absolute;
@@ -74,6 +75,9 @@
     font-size: min(1em, 24px);
     color: $HIGH_FIDELITY_BLUE_COLOR;
     text-align: left;
+
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 
@@ -95,91 +99,32 @@
   }
 }
 
-/*
+@media (max-width: 650px) {
+  .infoCard {
+    .value {
+      font-size: 15px;
+    }
 
-@media (max-width: 1600px) {
-  .mechanics-info__item {
-    padding: 16px 25px;
-    justify-content: space-around;
-    min-width: 23%;
-    width: unset;
+    .title {
+      font-size: 12px;
+    }
+  }
+
+  .infoCardAddress {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 5fr;
+
+    .value {
+      text-align: left;
+      place-self: flex-start;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .infoCardMechanics {
+    .value, .title {
+      text-align: center;
+    }
   }
 }
-
-@media (max-width: 1200px) {
-  .card-info__item {
-    width: 31%;
-  }
-  .card-info__item-address {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .card-info__item-address .card-info__text {
-    width: 200px;
-  }
-  .card-info__item-address .card-info__active-text {
-    width: calc(100% - 200px);
-  }
-}
-
-@media (max-width: 950px) {
-  .mechanics-info__item {
-    width: 45%;
-  }
-}
-
-@media (max-width: 780px) {
-  .card-info__item .card-info__active-text {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-  }
-  .card-info__item .card-info__text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .card-info__item {
-    height: unset;
-    min-height: 100px;
-    padding: 14px 16px;
-    min-width: unset;
-  }
-  .card-info__item-address {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  .card-info__item-address .card-info__active-text {
-    margin-top: 10px;
-    margin-left: 0;
-    width: 100%;
-    padding: 8px 0 8px 12px;
-  }
-  .mechanics-info__item .card-info__active-text {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 0;
-  }
-  .mechanics-info__item .card-info__text {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 16px;
-  }
-}
-
-@media (max-width: 375px) {
-  .mechanics-info__item .card-info__active-text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .mechanics-info__item {
-    min-height: 75px;
-  }
-}
-
-@media (max-width: 330px) {
-  .card-info__item {
-    padding: 8px 10px;
-  }
-}*/

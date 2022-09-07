@@ -26,25 +26,19 @@ const Project = ({project}) => {
   const paragraphReadMoreClickHandle = () =>
     setParagraphOpen(!isParagraphOpen);
 
-  /*const [isMobileState, setIsMobileTate] = useState(false);
+  const [isMobileState, setIsMobileTate] = useState(false);
   useEffect(() => {
     setIsMobileTate(isMobile());
-  }, [isMobile()]);*/
+  }, [isMobile]);
 
   const [mechanicsList, setMechanicsList] = useState([]);
-  // const [isMechanicsOpen, setMechanicsOpen] = useState(false);
+  const [isMechanicsOpen, setMechanicsOpen] = useState(false);
+  const mechanicsReadMoreClickHandle = () =>
+    setMechanicsOpen(!isMechanicsOpen);
 
   useEffect(() => {
-    const list = Object.entries(mechanicsData);
-    /*isMobileState
-      ? isMechanicsOpen
-        ? setMechanicsList(list)
-        : setMechanicsList(sliceArrayByCount(4, list))
-      :*/
-    setMechanicsList(list);
-  }, [mechanicsData]);
-
-  // if (!coinInfo) return null;
+    setMechanicsList(Object.entries(mechanicsData));
+  }, []);
 
   return (
     <>
@@ -155,7 +149,7 @@ const Project = ({project}) => {
               )}
             </div>
           </div>
-          <div className={`${styles.projectSection} ${styles.mechanicsSection}`}>
+          <div className={`${styles.projectSection} ${styles.mechanicsSection} ${isMechanicsOpen ? styles.mechanicsSectionOpen : ''}`}>
             <SectionTitles
               title={`${info.name} STAKING MECHANICS`}
             />
@@ -168,14 +162,15 @@ const Project = ({project}) => {
                   isMechanics
                 />
               )}
-              {/*{isMobileState &&
-                <ReadMore
-                  isOpen={isMechanicsOpen}
-                  onClick={mechanicsReadMoreClickHandle}
-                  className="mechanics-info__see-all"
-                />
-              }*/}
             </div>
+            {isMobileState &&
+              <ReadMore
+                isOpen={isMechanicsOpen}
+                onClick={mechanicsReadMoreClickHandle}
+                textOpen={'See All'}
+                className={styles.readMoreMechanics}
+              />
+            }
           </div>
           {info.current_price && commonInfo.apy &&
             <div className={`${styles.projectSection}`}>
