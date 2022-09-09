@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Arrow from '../Arrow';
+
 import styles from '../../styles/components/Button.module.scss';
 import {whiteColor} from '../../styles/variables.module.scss';
 

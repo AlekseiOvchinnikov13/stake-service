@@ -1,13 +1,14 @@
 import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {isMobile} from '../../utils';
+
 import styles from '../../styles/components/TextStroke.module.scss';
 
 const TextStroke = ({text, position, textCase, className}) => {
-  const [isMobileState, setIsMobileTate] = useState(false);
+  const [isMobileState, setIsMobileState] = useState(false);
 
   useEffect(() => {
-    setIsMobileTate(isMobile());
+    setIsMobileState(isMobile());
   }, [isMobile()]);
 
   const [textDecoration, setTextDecoration] = useState('');

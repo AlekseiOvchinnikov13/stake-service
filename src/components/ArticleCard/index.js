@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import ImageContainer from '../ImageContainer';
 import Arrow from '../Arrow';
+import {POST_TITLE_HOW_TO_STAKE} from '../../data/projects';
 
 import styles from '../../styles/components/ArticleCard.module.scss';
 import {orangeColor} from '../../styles/variables.module.scss';
-import {POST_TITLE_HOW_TO_STAKE} from '../../data/projects';
 
 const ArticleCard = ({
   data: {

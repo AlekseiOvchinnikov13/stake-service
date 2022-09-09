@@ -23,24 +23,26 @@ import ContactForm from '../components/ContactForm';
 import Contacts from '../components/Contacts';
 import {PROJECTS_DATA} from '../data/projects';
 import {useGetProjectsQuery} from '../store/projects/projectsApi';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {getPosts} from '../store/posts/postsSlice';
 import {sliceArrayByCount} from '../helpers/helpers';
-import styles from '../styles/pages/Home.module.scss';
 import ReadMore from '../components/ReadMore';
+import usePosts from '../hooks/usePosts';
+
+import styles from '../styles/pages/Home.module.scss';
 
 const Home = () => {
   const {data, isLoading} = useGetProjectsQuery(PROJECTS_DATA.map(item => item.id));
-  const {data: posts, status} = useSelector(state => state.posts);
+  const {data: posts, status} = usePosts();
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  const [isMobileState, setIsMobileTate] = useState(false);
+  const [isMobileState, setIsMobileState] = useState(false);
   useEffect(() => {
-    setIsMobileTate(isMobile());
+    setIsMobileState(isMobile());
   }, [isMobile()]);
 
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
@@ -52,7 +54,8 @@ const Home = () => {
         <p className={styles.subTitle}>trusted & secure</p>
         <h1 className={styles.title}>validator</h1>
       </div>
-      <div id="project" className={`${styles.section} ${styles.projectSection} ${isProjectsOpen ? styles.projectSectionOpen : ''}`}>
+      <div id="project"
+        className={`${styles.section} ${styles.projectSection} ${isProjectsOpen ? styles.projectSectionOpen : ''}`}>
         <div className={styles.cardsWrapper}>
           {!isLoading && data.length > 0
             ? data.map(coin =>

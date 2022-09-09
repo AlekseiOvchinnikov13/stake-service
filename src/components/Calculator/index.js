@@ -5,9 +5,10 @@ import Input from './Input';
 import EarningCard from './EarningCard';
 import Button from '../Button/Button';
 import {EARNING_CARDS_DATA} from '../../data/calculator';
-import useProjects from '../../hooks/useProjects';
-import styles from '../../styles/components/Calculator.module.scss';
 import {PROJECTS_DATA} from '../../data/projects';
+import useProjects from '../../hooks/useProjects';
+
+import styles from '../../styles/components/Calculator.module.scss';
 
 const Calculator = ({projectId, info, onButtonClick}) => {
   const coins = useProjects();

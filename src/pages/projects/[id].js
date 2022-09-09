@@ -1,13 +1,13 @@
 import {getCoinInfo} from '../api/api';
 import {
   GET_REWARD_CALCULATOR_SUBTITLE,
-  GET_STAKING_TUTORIAL_SUBTITLE, PROJECTS_DATA,
+  GET_STAKING_TUTORIAL_SUBTITLE,
+  PROJECTS_DATA
 } from '../../data/projects';
 import {getMainDataByCoinInfo} from '../../helpers/helpers';
 import TopBg from '/public/assets/images/project-bg.svg';
 import ImageContainer from '../../components/ImageContainer';
 import Button from '../../components/Button/Button';
-
 import {useEffect, useState} from 'react';
 import ReadMore from '../../components/ReadMore';
 import InfoCard from '../../components/InfoCard';
@@ -15,6 +15,7 @@ import SectionTitles from '../../components/SectionTitles';
 import ArticleCard from '../../components/ArticleCard';
 import {isMobile} from '../../utils';
 import Calculator from '../../components/Calculator';
+
 import styles from '../../styles/pages/ProjectPage.module.scss';
 
 const Project = ({project}) => {
@@ -29,7 +30,7 @@ const Project = ({project}) => {
   const [isMobileState, setIsMobileTate] = useState(false);
   useEffect(() => {
     setIsMobileTate(isMobile());
-  }, [isMobile]);
+  }, [isMobile()]);
 
   const [mechanicsList, setMechanicsList] = useState([]);
   const [isMechanicsOpen, setMechanicsOpen] = useState(false);
@@ -149,7 +150,8 @@ const Project = ({project}) => {
               )}
             </div>
           </div>
-          <div className={`${styles.projectSection} ${styles.mechanicsSection} ${isMechanicsOpen ? styles.mechanicsSectionOpen : ''}`}>
+          <div
+            className={`${styles.projectSection} ${styles.mechanicsSection} ${isMechanicsOpen ? styles.mechanicsSectionOpen : ''}`}>
             <SectionTitles
               title={`${info.name} STAKING MECHANICS`}
             />

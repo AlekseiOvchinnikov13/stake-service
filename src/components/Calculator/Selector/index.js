@@ -3,6 +3,7 @@ import Arrow from '../../Arrow';
 import ToggleArrow from './images/toggle-arrow.svg';
 import ImageContainer from '../../ImageContainer';
 import DropDown from '../DropDown';
+
 import styles from '../../../styles/components/Selector.module.scss';
 import {purpleColor, calcInactiveColor} from '../../../styles/variables.module.scss';
 
@@ -23,7 +24,6 @@ const Selector = ({
   const [isOpen, setIsOpen] = useState(false);
 
   if (!activeCoin) return null;
-  // console.log({activeCoin});
 
   return (
     <div className={`${styles.selector} ${projectId ? styles.selectorProject : ''}`}>

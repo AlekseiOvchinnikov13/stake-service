@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import styles from '../../../styles/components/EarningCard.module.scss';
 import {PROJECTS_DATA} from '../../../data/projects';
 import useProjects from '../../../hooks/useProjects';
+
+import styles from '../../../styles/components/EarningCard.module.scss';
 
 const EarningCard = ({
   isCrypto,
@@ -14,7 +15,6 @@ const EarningCard = ({
     count
   }
 }) => {
-
   const coins = useProjects();
 
   if (!projectId) return null;

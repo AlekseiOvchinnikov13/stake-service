@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Arrow from '../Arrow';
+
 import styles from '../../styles/components/ReadMore.module.scss';
 import {blueColor} from '../../styles/variables.module.scss';
 

@@ -4,6 +4,7 @@ import {cleanText, dateTimeToDateFormat} from '../../helpers/helpers';
 import LinkArrow from '../LinkArrow';
 import ImageContainer from '../ImageContainer';
 import Tag from '../Tag';
+
 import styles from '../../styles/components/BlogCard.module.scss';
 import {blueColor} from '../../styles/variables.module.scss';
 

@@ -1,5 +1,6 @@
 import {menuCalcItem} from '../../../data/menu';
 import Link from 'next/link';
+
 import styles from '../../../styles/components/CalculatorButton.module.scss';
 
 const CalculatorButton = () =>

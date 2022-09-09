@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+
 import {imageContainer} from '../../styles/components/ImageContainer.module.scss';
 
 const ImageContainer = ({src, className, alt, objectFit, layout, ...other}) => (

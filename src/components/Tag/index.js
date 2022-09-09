@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {useState} from 'react';
+
 import styles from '../../styles/components/Tag.module.scss';
 
 const Tag = ({label, className, isFilter, addHandle, delHandle}) => {

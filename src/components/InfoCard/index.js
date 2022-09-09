@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import {toast} from 'react-toastify';
 import Toast from '../Toast';
+
 import styles from '../../styles/components/InfoCard.module.scss';
 
 const InfoCard = ({
@@ -9,7 +10,6 @@ const InfoCard = ({
   isAddress,
   isMechanics
 }) => {
-
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(value)
       .then(() => {

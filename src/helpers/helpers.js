@@ -1,8 +1,3 @@
-import {useContext} from 'react';
-import {PostsContext} from '../context/PostsContext';
-
-// const MobileWidth = '950';
-
 /**
  * Delete html tags from text
  * @param text {String} text
@@ -33,13 +28,12 @@ export const dateTimeToDateFormat = (date) => {
 export const sliceArrayByCount = (num, array) =>
   array.slice(0, num - array.length);
 
+
 /**
  * Get all exist posts categories
  * @returns {any[]}
  */
-export const getAllCategories = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const posts = useContext(PostsContext);
+export const getAllCategories = posts => {
   const cats = posts && posts.reduce((acc, post) =>
     acc.concat(post?.categories)
   , []);

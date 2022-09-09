@@ -2,9 +2,10 @@ import ImageContainer from '../ImageContainer';
 import Link from 'next/link';
 import Arrow from '../Arrow';
 import {PROJECTS_DATA} from '../../data/projects';
+
 import styles from '../../styles/components/ProjectCard.module.scss';
 
-const ProjectCard = ({data : {image, name, id}}) => {
+const ProjectCard = ({data: {image, name, id}}) => {
   const {commonInfo: {apy}} = PROJECTS_DATA.find(project => project.id === id);
 
   return (

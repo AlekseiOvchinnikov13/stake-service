@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Arrow from '../Arrow';
+
 import styles from '../../styles/components/LinkArrow.module.scss';
 
 const LinkArrow = ({to, label, className, color}) => {

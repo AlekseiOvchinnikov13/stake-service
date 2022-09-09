@@ -1,0 +1,31 @@
+@import '../variables.module';
+
+.categories {
+  padding: .01388em .016666em;
+  border-radius: .01111em;
+  box-shadow: 0 1.1966px 29.915px $EARNING_CARD_BOX_SHADOW;
+  background: $HIGH_FIDELITY_WHITE_COLOR;
+  backdrop-filter: blur(40px);
+  max-width: 100%;
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $FONT_WHITE_COLOR;
+  }
+
+  .tagsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    .tag {
+      font-size: 14px;
+    }
+  }
+}

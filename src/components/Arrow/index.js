@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import {orangeColor} from '../../styles/variables.module.scss';
+
 import styles from '../../styles/components/Arrow.module.scss';
+import {orangeColor} from '../../styles/variables.module.scss';
 
 const Arrow = ({isLong, fillColor, direction, className}) => {
   let directionClass;
@@ -34,7 +35,8 @@ const Arrow = ({isLong, fillColor, direction, className}) => {
           </defs>
         </svg>
         : <svg viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill={fillColor} d="M0.726669 7.06L3.78 4L0.726669 0.94L1.66667 -2.38419e-07L5.66667 4L1.66667 8L0.726669 7.06Z"/>
+          <path fill={fillColor}
+            d="M0.726669 7.06L3.78 4L0.726669 0.94L1.66667 -2.38419e-07L5.66667 4L1.66667 8L0.726669 7.06Z"/>
         </svg>
       }
     </div>

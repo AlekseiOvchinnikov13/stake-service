@@ -1,5 +1,6 @@
 import {PROJECTS_DATA} from '../../../data/projects';
 import useProjects from '../../../hooks/useProjects';
+
 import styles from '../../../styles/components/DropDown.module.scss';
 
 const DropDown = ({

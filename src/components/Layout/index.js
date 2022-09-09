@@ -2,8 +2,9 @@ import {useLayoutEffect, useState} from 'react';
 import Head from 'next/head';
 import {isBrowser} from '../../utils';
 import Header from '../Header';
-import {layout} from '../../styles/components/Layout.module.scss';
 import Footer from '../Footer';
+
+import {layout} from '../../styles/components/Layout.module.scss';
 
 const Layout = ({children}) => {
   const [, setSize] = useState([0, 0]);

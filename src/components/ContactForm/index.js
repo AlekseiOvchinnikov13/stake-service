@@ -10,9 +10,10 @@ import {
 import Loader from '../Loader';
 import Text from '../Text';
 import PropTypes from 'prop-types';
+import Arrow from '../Arrow';
+
 import styles from '../../styles/components/ContactForm.module.scss';
 import {whiteColor} from '../../styles/variables.module.scss';
-import Arrow from '../Arrow';
 
 const ContactForm = ({projectId}) => {
   const [state, handleSubmit] = useForm('mvolbvjv');
