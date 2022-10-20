@@ -350,10 +350,12 @@ export const PROJECTS_DATA = [
   {
     id: 'dock',
     commonInfo: {
-      explorerLink: '',
+      explorerLink: 'https://dock.subscan.io/validator/3DzZo8Ppo7FRVBtHGtC2WSREd41YycaAQEGphRheZtayidQT',
       apy: 14.73
     },
     projectsPage: {
+      stakingCommissionValue: '12&nbsp;%',
+      totalStakeValue: '1394807',
       description: {
         desc1: 'Dock is&nbsp;a&nbsp;platform designed to&nbsp;provide a&nbsp;simple solution for businesses and developers to&nbsp;build, manage and present digital credentials that are instantly verifiable using blockchain technology.',
         desc2: 'With a standalone blockchain and integrated payment and incentivisation token, a trusted network of validators, and seamless adoption and interoperability, Dock is part of a movement to solve universal problems with existing data and how it is captured, shared and controlled.'
@@ -362,6 +364,7 @@ export const PROJECTS_DATA = [
         'Protocol Category': 'Layer 2',
         'Staking Type': 'PoS',
         'Governance': 'Validator vote',
+        'Validator Address': '3DzZo8Ppo7FRVBtHGtC2WSREd41YycaAQEGphRheZtayidQT',
       },
       articleLinks: [
         {
