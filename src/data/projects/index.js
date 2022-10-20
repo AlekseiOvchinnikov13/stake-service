@@ -317,6 +317,7 @@ export const PROJECTS_DATA = [
     id: 'agoric',
     commonInfo: {
       explorerLink: 'https://atomscan.com/agoric/validators/agoricvaloper1upz9xpay0qx0vqealgr69ejtpzj5gskla5v0d9',
+      apy: 5.21
     },
     projectsPage: {
       stakingCommissionValue: '2&nbsp;%',
