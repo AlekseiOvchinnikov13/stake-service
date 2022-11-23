@@ -281,7 +281,7 @@ export const PROJECTS_DATA = [
       ]
     }
   },
-  {
+  /*{
     id: 'centrifuge',
     commonInfo: {
       explorerLink: 'https://portal.chain.centrifuge.io/#/staking/query/4dfMuh3JVgrKgeWyzbcys2y5H3BJzzTySUmgUkgmuQumDZAK',
@@ -312,7 +312,7 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  },
+  },*/
   {
     id: 'agoric',
     commonInfo: {
