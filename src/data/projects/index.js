@@ -15,8 +15,8 @@ export const PROJECTS_DATA = [
       apy: 5.34
     },
     projectsPage: {
-      stakingCommissionValue: '10&nbsp;%',
-      totalStakeValue: '206448',
+      stakingCommissionValue: '0&nbsp;%',
+      totalStakeValue: '404986',
       delegatorsValue: '484',
       description: {
         desc1: 'Solana is&nbsp;a&nbsp;high-performance cryptocurrency blockchain that supports smart contracts and decentralized applications. Its feature is&nbsp;the use of&nbsp;a&nbsp;special PoS consensus mechanism, called Proof-of-History, with time-stamped transactions in&nbsp;order to&nbsp;achieve maximum efficiency.',
@@ -26,7 +26,7 @@ export const PROJECTS_DATA = [
         'Protocol Category': 'Layer 1',
         'Staking Type': 'PoH',
         'Governance': 'Validator vote',
-        'Validator Address': '4dmBLJcchyfucSxkVmrymmsnVpZm3rBkp7kbF7qHTTYW',
+        'Validator Address': 'EXrWdDxFaE3Sfsbh3TV5ToGhMqu53xrmeoVdvn467jUH',
       },
       articleLinks: [
         {
