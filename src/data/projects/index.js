@@ -12,12 +12,12 @@ export const PROJECTS_DATA = [
     id: 'solana',
     commonInfo: {
       explorerLink: 'https://www.validators.app/validators/HoXANZnWTGeePertqWkMEnnhgXjTjzpfWaT2kja2ZgVU?locale=en&network=mainnet',
-      apy: 5.34
+      apy: 7.25
     },
     projectsPage: {
       stakingCommissionValue: '0&nbsp;%',
       totalStakeValue: '404986',
-      delegatorsValue: '484',
+      delegatorsValue: '315',
       description: {
         desc1: 'Solana is&nbsp;a&nbsp;high-performance cryptocurrency blockchain that supports smart contracts and decentralized applications. Its feature is&nbsp;the use of&nbsp;a&nbsp;special PoS consensus mechanism, called Proof-of-History, with time-stamped transactions in&nbsp;order to&nbsp;achieve maximum efficiency.',
         desc2: 'Solana solves one of&nbsp;the main problems-slow transactions and high costs (which are found in&nbsp;layer-1&nbsp;analogues, for example, Bitcoin and Ethereum). Solana is&nbsp;capable of&nbsp;processing about 50,000 transactions per second. Also an&nbsp;important area of&nbsp;activity of&nbsp;the Solana Foundation is&nbsp;to&nbsp;ensure greater access to&nbsp;decentralized finance.'
