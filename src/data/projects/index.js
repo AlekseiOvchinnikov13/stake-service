@@ -11,7 +11,7 @@ export const PROJECTS_DATA = [
   {
     id: 'solana',
     commonInfo: {
-      explorerLink: 'https://www.validators.app/validators/HoXANZnWTGeePertqWkMEnnhgXjTjzpfWaT2kja2ZgVU?locale=en&network=mainnet',
+      explorerLink: 'https://www.validators.app/validators/A1GgCvSs374GeXguQk1u91sWSLZqGVUsfJ4B4KrKjEhp?locale=en&network=mainnet',
       apy: 7.25
     },
     projectsPage: {
