@@ -78,7 +78,7 @@ export const PROJECTS_DATA = [
       ]
     }
   },
-  {
+  /*{
     id: 'the-graph',
     commonInfo: {
       explorerLink: 'https://www.maplenodes.com/graph/indexer/0x19fBac0891042bE71Ce60321a17720358575f580',
@@ -110,7 +110,7 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  },
+  },*/
   {
     id: 'oasis-network',
     commonInfo: {
@@ -147,7 +147,7 @@ export const PROJECTS_DATA = [
       ]
     }
   },
-  {
+  /*{
     id: 'avalanche-2',
     commonInfo: {
       explorerLink: 'https://avascan.info/staking/validator/NodeID-MZQmJvHFuSEPnhbTKzohubAqFi32Tc2Bz',
@@ -179,7 +179,7 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  },
+  },*/
   {
     id: 'regen',
     commonInfo: {
@@ -215,7 +215,7 @@ export const PROJECTS_DATA = [
       ]
     }
   },
-  {
+  /*{
     id: 'sentinel',
     commonInfo: {
       explorerLink: 'https://atomscan.com/sentinel/validators/sentvaloper163g6kygmh08mgp0kj4gkenl4hj6nsqzguk6rzf',
@@ -248,8 +248,8 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  },
-  {
+  },*/
+  /*{
     id: 'xxcoin',
     commonInfo: {
       explorerLink: 'https://wallet.xx.network/#/staking/query/6XLcDwtHFRGdFHQm8j8sAszD3pJQ5sv35RUuXURH87rUv73D',
@@ -280,7 +280,7 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  },
+  },*/
   /*{
     id: 'centrifuge',
     commonInfo: {
@@ -348,7 +348,7 @@ export const PROJECTS_DATA = [
       ]
     }
   },
-  {
+  /*{
     id: 'dock',
     commonInfo: {
       explorerLink: 'https://dock.subscan.io/validator/3DzZo8Ppo7FRVBtHGtC2WSREd41YycaAQEGphRheZtayidQT',
@@ -380,7 +380,7 @@ export const PROJECTS_DATA = [
         }
       ]
     }
-  }
+  }*/
 ];
 
 /*export const PRODUCT_CARDS_ARRAY = [

@@ -5,13 +5,14 @@ import {imageContainer} from '../../styles/components/ImageContainer.module.scss
 
 const ImageContainer = ({src, className, alt, objectFit, layout, ...other}) => (
   <div className={`${imageContainer} ${className}`}>
-    <Image
-      src={src}
-      alt={alt}
-      layout={layout}
-      objectFit={objectFit}
-      {...other}
-    />
+    {src &&
+      <Image
+        src={src}
+        alt={alt}
+        layout={layout}
+        objectFit={objectFit}
+        {...other}
+      />}
   </div>
 );
 
